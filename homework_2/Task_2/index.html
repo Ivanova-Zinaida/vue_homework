@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+ <div id="menu">
+       <header class="header">
+           <nav class="menu header__menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#" class="menu__link" data-menu='home' @click='showActivePage($event)'>{{ menu.home }}</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-menu='portfolio' @click='showActivePage($event)'>{{ menu.portfolio }} </a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-menu='blog' @click='showActivePage($event)'>{{ menu.blog }}</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-menu='shop' @click='showActivePage($event)'>{{ menu.shop }}</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <div class="menu-content" v-bind:is="curentPage">
+
+    </div>
+
+ </div>
+<script src="js/main.js"></script>
+</body>
+</html>

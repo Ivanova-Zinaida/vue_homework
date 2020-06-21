@@ -10,7 +10,7 @@
         <section class="product-layter" id = 'product'>
         <div class="container">
               <div class="product-layter__block">
-                  <fotm class="product-layter__form">
+                  <form class="product-layter__form">
                       <h2 class="section__title product-layter__subtitle banner__title">{{product.title}}</h2>
                       <p class="list__titte">Color: {{product.color}}</p>
                       <p class="list__titte list__title_size">Size: {{product.size}}</p>
@@ -18,7 +18,7 @@
                       <div class="form__btn_block">
                           <span class="form__prise">{{product.priceSale | returnPrice}}<span class="form__prise_small">{{product.price | returnPrice}}</span></span>
                       </div>   
-                 </fotm>
+                 </form>
 
                  <div class="product-layter__wrap">
                     <img :src="product.url" alt="" class="layter-slider_big">
