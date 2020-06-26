@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task_2</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+ <div id="app">
+   <div class="servesis" v-for='service in services'>
+        <label> <input type="checkbox" :value='service.price' v-model='totalPrice'><span> {{service.title}} </span> <span> цена: {{ service.price }} рублей </span></label>
+       
+    </div>
+    <div class="total-price">С вас {{ sunTotalPrice }} рублей </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

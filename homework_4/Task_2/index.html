@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task_2</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/arrNews.js"></script>
+</head>
+<body>
+ <div id="app">
+   <div class="text-contant">
+        <h1 class="title"> {{ title }} </h1>
+        <div class="news-content">
+          <div v-show='flag'>
+              <template v-for="art in news">
+                    <div class="news__item">
+                        <h2 class="news__title"><a :href="art.url" target="_blank" class="new__link"> {{ art.title }} </a></h2>
+                        <div class="flex">
+                           <a :href="art.url" target="_blank" class="new__link" ><img :src="art.img" alt="" class="new__img"></a> 
+                           <p class="new__text"> {{ art.description }}
+                               <a href='#' class="btn new__link" :data-news='art.id'
+                               @click='showActivePage'
+                               >Читать статью</a>
+                           </p>    
+                        </div>  
+                    </div>
+                </template>      
+          </div>       
+            <div v-show = '!flag'>
+                <template v-for="art in curentPage">
+                    <div class="news__item">
+                        <h2 class="news__title"><a :href="art.url" target="_blank" class="new__link"> {{ art.title }} </a></h2>
+                        <div class="flex">
+                           <a :href="art.url" target="_blank" class="new__link" ><img :src="art.img" alt="" class="new__img"></a> 
+                           <p class="new__text"> {{ art.fulldescription }}
+                               <a href='#' class="btn new__link" :data-news='art.id'
+                               @click='returnPage'
+                               >вернуться</a>
+                           </p>    
+                        </div>  
+                    </div>
+                </template> 
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

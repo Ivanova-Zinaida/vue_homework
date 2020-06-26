@@ -12,8 +12,8 @@ let menu = new Vue({
         curentPage: 'home',
     },
     methods:{
-        showActivePage: function(e){
-             let page = e.target.getAttribute('data-menu')
+        showNews: function(){
+             let page = e.target.getAttribute('data-news')
              return this.curentPage = page
         }
     },
