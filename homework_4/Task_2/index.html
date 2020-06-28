@@ -11,8 +11,8 @@
  <div id="app">
    <div class="text-contant">
         <h1 class="title"> {{ title }} </h1>
-        <div class="news-content">
-
+        <button class="btn-table" @click='chengeFlag' >Переключить отображение</button>
+        <div class="news-content" v-show = '!flag'>
               <template v-for="art in news">
                     <div class="news__item">
                         <h2 class="news__title"><a :href="art.url" target="_blank" class="new__link"> {{ art.title }} </a></h2>
@@ -23,9 +23,21 @@
                            </p>    
                         </div>  
                     </div> 
-           </template>   
+              </template>   
         </div>
-    </div>
+        <div class="news-table" v-show = 'flag'>
+              <template v-for="art in news">
+                    <div class="news__item-table">
+                        <h2 class="news__title"><a :href="art.url" target="_blank" class="new__link"> {{ art.title }} </a></h2>
+                        <div class="flex-table">
+                           <a :href="art.url" target="_blank" class="new__link" ><img :src="art.img" alt="" class="new__img"></a> 
+                           <p class="new__text"> {{ art.description }}</p>      
+                        </div>
+                        <a :href='art.url' class="btn new__link btn-new" :data-news='art.id'>Читать статью</a>   
+                    </div> 
+              </template>   
+        </div>
+        </div>
 
 </div>
 <script src="js/main.js"></script>

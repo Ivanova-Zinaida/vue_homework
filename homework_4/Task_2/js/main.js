@@ -4,11 +4,18 @@ let app = new Vue({
     data:{
     news:[],
     title: 'Новости кино.', 
+    flag: true,
+    },
+    
+    methods: {
+      chengeFlag: function(){
+          this.flag = !this.flag;
+          console.log(this.flag)
+      }  
     },
 
-
     created: function() {                
-         this.news = window.arrNews;
+         this.news = window.arrNews
     },   
                    
 });
