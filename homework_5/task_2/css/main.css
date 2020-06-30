@@ -1,0 +1,30 @@
+.wrap{
+    position: relative;
+    width: 980px;
+    height: 400px;
+    margin: 0 auto; 
+    border: 2px solid gray;
+}
+.slider-item{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top:37%;
+    left: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+.item-active{
+    opacity: 1;
+}
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active до версии 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
