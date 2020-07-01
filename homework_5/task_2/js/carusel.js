@@ -32,7 +32,7 @@ Vue.component('v-slider', {
                 }
                 that.items[i].isActive = true;  
             },4000)
-        }
+            }
         },
      mounted () {
         this.changeSlide()
