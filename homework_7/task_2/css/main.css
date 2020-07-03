@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#app{
+    width: 980px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  margin-top: 10px;
+  border-bottom: 1px solid #aaa;
+  border-right: 1px solid #aaa;  
+}
+.cell {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+  border-top: 1px solid #aaa;
+  border-left:  1px solid #aaa;
+ cursor: pointer;
+}
+
+.cell-move {
+  transition: transform 1s;
+}
